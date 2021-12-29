@@ -1,7 +1,7 @@
-# Embed-MD User Guide <!-- omit in toc -->
-Embed-MD embeds code snippets into Markdown files. It helps keep examples up to
-date by syncing code referenced in Markdown files with your actual source code.
-This also makes it easier to ensure samples are unit tested, etc. Snippets
+# Embed-Markdown User Guide <!-- omit in toc -->
+Embed-Markdown embeds code snippets into Markdown files. It helps keep examples
+up to date by syncing code referenced in Markdown files with your actual source
+code. This also makes it easier to ensure samples are unit tested, etc. Snippets
 can be extracted from any text file (not necessarily even a from a code file).
 
 ## Topics <!-- omit in toc -->
@@ -15,15 +15,15 @@ can be extracted from any text file (not necessarily even a from a code file).
   - [Remove Embedded Source Code](#remove-embedded-source-code)
 
 # Installation
-1. Run `pip install embed-md`
-2. Make sure `embed-md` is in the 'PATH'
-   1. Run `pip show embed-md` to show where it's installed
+1. Run `pip install embed-markdown`
+2. Make sure `embed-markdown` is in the 'PATH'
+   1. Run `pip show embed-markdown` to show where it's installed
    2. Edit `~/.bash_profile` (or equivalence of it) to include the path
    3. Run `source ~/.bash_profile`
 
 # Quick Start
 To use this tool, first add source code references to your Markdown files. Then
-run `embed-md` to update all Markdown files inside the
+run `embed-markdown` to update all Markdown files inside the
 current directory (and all subdirectories) with the latest source code
 referenced.
 
