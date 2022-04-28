@@ -65,8 +65,9 @@ Our Responsibility. As contributors, members, or bystanders we each individually
 - Other conduct which could reasonably be considered inappropriate in a professional setting;
 - Advocating for or encouraging any of the above behaviors.
 
+
 ## Security issue notifications
-If you discover a potential security issue in this project we ask that you notify Pocket Gems at it@pocketgems.com. Please do **NOT** create a public github issue.
+If you discover a potential security issue in this project we ask that you notify Pocket Gems at opensource-security@pocketgems.com. Please do **NOT** create a public github issue.
 
 
 ## Licensing
