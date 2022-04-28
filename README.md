@@ -97,5 +97,5 @@ from
     // Example 1 end
 
 ## Remove Embedded Source Code
-Run `python ./path/to/embed-md.py --remove` to remove all embedded code
-snippets, leaving only the embed directive.
+Run `embed-markdown --remove` to remove all embedded code snippets, leaving only
+the embed directive.
