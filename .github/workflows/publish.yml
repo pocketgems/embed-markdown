@@ -5,6 +5,7 @@ on:
       - main
 jobs:
   publish:
+    if: ${{ secrets.PYPI_PASSWORD }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -17,7 +18,6 @@ jobs:
         run: python -m build
       - name: Publish
         env:
-          TWINE_REPOSITORY_URL: ${{ secrets.PYPI_REPOSITORY_URL }}
           TWINE_USERNAME: ${{ secrets.PYPI_USERNAME }}
           TWINE_PASSWORD: ${{ secrets.PYPI_PASSWORD }}
         run: python -m twine upload dist/*
