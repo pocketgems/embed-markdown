@@ -6,12 +6,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Check Private Key Agreement
-        uses: JJ/github-pr-contains-action@releases/v4
-        with:
-          github-token: ${{github.token}}
-          bodyContains: "I confirm there is no private key, token, secret, etc. added in this pull request, as they will become publicly accessible and result in security breach."
+        if: |
+          !contains(github.event.pull_request.body, 'I confirm there is no private key, token, secret, etc. added in this pull request, as they will become publicly accessible and result in security breach.')
+        run: exit 1
       - name: Check Contributor Agreement
-        uses: JJ/github-pr-contains-action@releases/v4
-        with:
-          github-token: ${{github.token}}
-          bodyContains: "By submitting this pull request, I confirm that you can use, modify, copy, and redistribute this contribution, under the terms of your choice."
+        if: |
+          !contains(github.event.pull_request.body, 'By submitting this pull request, I confirm that you can use, modify, copy, and redistribute this contribution, under the terms of your choice.')
+        run: exit 1
