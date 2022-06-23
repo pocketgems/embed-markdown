@@ -1,0 +1,17 @@
+name: check-pr-body
+on: [pull_request]
+jobs:
+  check_agreement:
+    name: Check Required PR Contents
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check Private Key Agreement
+        uses: JJ/github-pr-contains-action@releases/v0
+        with:
+          github-token: ${{github.token}}
+          bodyContains: "- I confirm there is no private key, token, secret, etc. added in this pull request, as they will become publicly accessible and result in security breach."
+      - name: Check Contributor Agreement
+        uses: JJ/github-pr-contains-action@releases/v0
+        with:
+          github-token: ${{github.token}}
+          bodyContains: "- By submitting this pull request, I confirm that you can use, modify, copy, and redistribute this contribution, under the terms of your choice."
